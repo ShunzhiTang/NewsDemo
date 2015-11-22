@@ -58,6 +58,11 @@
 		24542A411C01AA250050ED5A /* NewsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				24542A6D1C01AD650050ED5A /* Sound(试听) */,
+				24542A681C01AD600050ED5A /* Sound(试听) */,
+				24542A631C01AD5B0050ED5A /* Mine(我) */,
+				24542A5E1C01AD520050ED5A /* Discover(发现) */,
+				24542A591C01AD3E0050ED5A /* Main(发现) */,
 				24542A451C01AA250050ED5A /* AppDelegate.h */,
 				24542A461C01AA250050ED5A /* AppDelegate.m */,
 				24542A481C01AA250050ED5A /* ViewController.h */,
@@ -77,6 +82,201 @@
 				24542A431C01AA250050ED5A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		24542A591C01AD3E0050ED5A /* Main(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				24542A5A1C01AD3E0050ED5A /* Controller */,
+				24542A5B1C01AD3E0050ED5A /* Model */,
+				24542A5C1C01AD3E0050ED5A /* Other */,
+				24542A5D1C01AD3E0050ED5A /* View */,
+			);
+			path = "Main(发现)";
+			sourceTree = "<group>";
+		};
+		24542A5A1C01AD3E0050ED5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24542A5B1C01AD3E0050ED5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24542A5C1C01AD3E0050ED5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24542A5D1C01AD3E0050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24542A5E1C01AD520050ED5A /* Discover(发现) */ = {
+			isa = PBXGroup;
+			children = (
+				24542A5F1C01AD520050ED5A /* Controller */,
+				24542A601C01AD520050ED5A /* Model */,
+				24542A611C01AD520050ED5A /* Other */,
+				24542A621C01AD520050ED5A /* View */,
+			);
+			path = "Discover(发现)";
+			sourceTree = "<group>";
+		};
+		24542A5F1C01AD520050ED5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24542A601C01AD520050ED5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24542A611C01AD520050ED5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24542A621C01AD520050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24542A631C01AD5B0050ED5A /* Mine(我) */ = {
+			isa = PBXGroup;
+			children = (
+				24542A641C01AD5B0050ED5A /* Controller */,
+				24542A651C01AD5B0050ED5A /* Model */,
+				24542A661C01AD5B0050ED5A /* Other */,
+				24542A671C01AD5B0050ED5A /* View */,
+			);
+			path = "Mine(我)";
+			sourceTree = "<group>";
+		};
+		24542A641C01AD5B0050ED5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24542A651C01AD5B0050ED5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24542A661C01AD5B0050ED5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24542A671C01AD5B0050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24542A681C01AD600050ED5A /* Sound(试听) */ = {
+			isa = PBXGroup;
+			children = (
+				24542A691C01AD600050ED5A /* Controller */,
+				24542A6A1C01AD600050ED5A /* Model */,
+				24542A6B1C01AD600050ED5A /* Other */,
+				24542A6C1C01AD600050ED5A /* View */,
+			);
+			path = "Sound(试听)";
+			sourceTree = "<group>";
+		};
+		24542A691C01AD600050ED5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24542A6A1C01AD600050ED5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24542A6B1C01AD600050ED5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24542A6C1C01AD600050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24542A6D1C01AD650050ED5A /* Sound(试听) */ = {
+			isa = PBXGroup;
+			children = (
+				24542A6E1C01AD650050ED5A /* Controller */,
+				24542A6F1C01AD650050ED5A /* Model */,
+				24542A701C01AD650050ED5A /* Other */,
+				24542A711C01AD650050ED5A /* View */,
+			);
+			path = "Sound(试听)";
+			sourceTree = "<group>";
+		};
+		24542A6E1C01AD650050ED5A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24542A6F1C01AD650050ED5A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24542A701C01AD650050ED5A /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24542A711C01AD650050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
