@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		243905E91C024BF000E0F2C7 /* TSZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243905E81C024BF000E0F2C7 /* TSZHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		24542A441C01AA250050ED5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A431C01AA250050ED5A /* main.m */; };
 		24542A471C01AA250050ED5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A461C01AA250050ED5A /* AppDelegate.m */; };
-		24542A4A1C01AA250050ED5A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A491C01AA250050ED5A /* ViewController.m */; };
+		24542A4A1C01AA250050ED5A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A491C01AA250050ED5A /* MainViewController.m */; };
 		24542A4D1C01AA250050ED5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24542A4B1C01AA250050ED5A /* Main.storyboard */; };
 		24542A4F1C01AA250050ED5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24542A4E1C01AA250050ED5A /* Assets.xcassets */; };
 		24542A521C01AA250050ED5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24542A501C01AA250050ED5A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		243905E71C024BF000E0F2C7 /* TSZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZHomeViewController.h; sourceTree = "<group>"; };
+		243905E81C024BF000E0F2C7 /* TSZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZHomeViewController.m; sourceTree = "<group>"; };
 		24542A3F1C01AA250050ED5A /* NewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24542A431C01AA250050ED5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24542A451C01AA250050ED5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		24542A461C01AA250050ED5A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		24542A481C01AA250050ED5A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		24542A491C01AA250050ED5A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		24542A481C01AA250050ED5A /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		24542A491C01AA250050ED5A /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		24542A4C1C01AA250050ED5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		24542A4E1C01AA250050ED5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24542A511C01AA250050ED5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +42,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		243905E21C024BA000E0F2C7 /* Main(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				243905E31C024BA000E0F2C7 /* Controller */,
+				243905E41C024BA000E0F2C7 /* Model */,
+				243905E51C024BA000E0F2C7 /* Other */,
+				243905E61C024BA000E0F2C7 /* View */,
+			);
+			path = "Main(主页)";
+			sourceTree = "<group>";
+		};
+		243905E31C024BA000E0F2C7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				243905E71C024BF000E0F2C7 /* TSZHomeViewController.h */,
+				243905E81C024BF000E0F2C7 /* TSZHomeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		243905E41C024BA000E0F2C7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		243905E51C024BA000E0F2C7 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		243905E61C024BA000E0F2C7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		24542A361C01AA240050ED5A = {
 			isa = PBXGroup;
 			children = (
@@ -58,15 +102,15 @@
 		24542A411C01AA250050ED5A /* NewsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				243905E21C024BA000E0F2C7 /* Main(主页) */,
 				24542A6D1C01AD650050ED5A /* Sound(试听) */,
 				24542A681C01AD600050ED5A /* Sound(试听) */,
 				24542A631C01AD5B0050ED5A /* Mine(我) */,
 				24542A5E1C01AD520050ED5A /* Discover(发现) */,
-				24542A591C01AD3E0050ED5A /* Main(发现) */,
 				24542A451C01AA250050ED5A /* AppDelegate.h */,
 				24542A461C01AA250050ED5A /* AppDelegate.m */,
-				24542A481C01AA250050ED5A /* ViewController.h */,
-				24542A491C01AA250050ED5A /* ViewController.m */,
+				24542A481C01AA250050ED5A /* MainViewController.h */,
+				24542A491C01AA250050ED5A /* MainViewController.m */,
 				24542A4B1C01AA250050ED5A /* Main.storyboard */,
 				24542A4E1C01AA250050ED5A /* Assets.xcassets */,
 				24542A501C01AA250050ED5A /* LaunchScreen.storyboard */,
@@ -82,45 +126,6 @@
 				24542A431C01AA250050ED5A /* main.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		24542A591C01AD3E0050ED5A /* Main(发现) */ = {
-			isa = PBXGroup;
-			children = (
-				24542A5A1C01AD3E0050ED5A /* Controller */,
-				24542A5B1C01AD3E0050ED5A /* Model */,
-				24542A5C1C01AD3E0050ED5A /* Other */,
-				24542A5D1C01AD3E0050ED5A /* View */,
-			);
-			path = "Main(发现)";
-			sourceTree = "<group>";
-		};
-		24542A5A1C01AD3E0050ED5A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		24542A5B1C01AD3E0050ED5A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		24542A5C1C01AD3E0050ED5A /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		24542A5D1C01AD3E0050ED5A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		24542A5E1C01AD520050ED5A /* Discover(发现) */ = {
@@ -305,6 +310,7 @@
 		24542A371C01AA240050ED5A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TSZ;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Tsz;
 				TargetAttributes = {
@@ -350,9 +356,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24542A4A1C01AA250050ED5A /* ViewController.m in Sources */,
+				24542A4A1C01AA250050ED5A /* MainViewController.m in Sources */,
 				24542A471C01AA250050ED5A /* AppDelegate.m in Sources */,
 				24542A441C01AA250050ED5A /* main.m in Sources */,
+				243905E91C024BF000E0F2C7 /* TSZHomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +508,7 @@
 				24542A581C01AA250050ED5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

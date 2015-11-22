@@ -1,25 +1,68 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aiX-j1-Thv">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="3jO-dW-c9P">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <navigationController id="aiX-j1-Thv" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jGH-gT-xDc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mTb-HV-x8B" kind="relationship" relationship="rootViewController" id="fKa-gD-0P3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1N-Oo-riL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-712" y="207"/>
+        </scene>
+        <!--新闻天下-->
+        <scene sceneID="Idp-aq-waG">
+            <objects>
+                <viewController id="mTb-HV-x8B" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="MwN-pV-Y9S"/>
+                        <viewControllerLayoutGuide type="bottom" id="kSw-hE-kGE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="Zvm-L4-ZOi">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SHP-za-vli">
+                                <rect key="frame" x="0.0" y="64" width="600" height="30"/>
+                                <color key="backgroundColor" red="0.86274516580000005" green="0.98431378599999997" blue="0.49803924560000001" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cfl-6n-XFo"/>
+                                </constraints>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iUD-MY-qbT">
+                                <rect key="frame" x="0.0" y="94" width="600" height="506"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iUD-MY-qbT" firstAttribute="leading" secondItem="Zvm-L4-ZOi" secondAttribute="leading" id="5Qb-jE-UrI"/>
+                            <constraint firstItem="SHP-za-vli" firstAttribute="top" secondItem="MwN-pV-Y9S" secondAttribute="bottom" id="EvY-KF-cco"/>
+                            <constraint firstItem="kSw-hE-kGE" firstAttribute="top" secondItem="iUD-MY-qbT" secondAttribute="bottom" id="NGa-eF-JOs"/>
+                            <constraint firstItem="SHP-za-vli" firstAttribute="leading" secondItem="Zvm-L4-ZOi" secondAttribute="leading" id="amZ-oe-XYE"/>
+                            <constraint firstAttribute="trailing" secondItem="SHP-za-vli" secondAttribute="trailing" id="b82-Ky-1w3"/>
+                            <constraint firstItem="iUD-MY-qbT" firstAttribute="top" secondItem="SHP-za-vli" secondAttribute="bottom" id="cVX-BM-XJS"/>
+                            <constraint firstAttribute="trailing" secondItem="iUD-MY-qbT" secondAttribute="trailing" id="w4h-Pp-665"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="新闻天下" id="CKB-ua-iK0"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="iUD-MY-qbT" id="jsq-b9-seE"/>
+                        <outlet property="titleScrollView" destination="SHP-za-vli" id="BXU-Q8-Ra6"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cpQ-RO-P1L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-65" y="133"/>
         </scene>
     </scenes>
 </document>
