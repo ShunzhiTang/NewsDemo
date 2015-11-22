@@ -7,8 +7,9 @@
 
 #import "MainViewController.h"
 #import "TSZHomeViewController.h"
+#import "TSZTitleLabel.h"
 
-@interface MainViewController ()
+@interface MainViewController ()<UIScrollViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *titleScrollView;
 
@@ -21,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.contentScrollView.delegate = self;
     //添加子控制器
     [self setupChildController];
    
@@ -38,36 +41,60 @@
     
     
     self.automaticallyAdjustsScrollViewInsets = NO;
+    //分页
+    self.contentScrollView.pagingEnabled = YES;
     
     //隐藏水平条
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
+    
+    //设置内容的size
+    
+    CGFloat  screen = [UIScreen mainScreen].bounds.size.width;
+    CGFloat contentW = self.childViewControllers.count * screen ;
+    
+    self.contentScrollView.contentSize  = CGSizeMake(contentW, 0);
+    
+   
+    
 }
 
 - (void)setupChildController{
     
     TSZHomeViewController *vC1 = [[TSZHomeViewController alloc] init];
-    vC1.title = @"1";
+    vC1.title = @"科技";
     
     [self addChildViewController:vC1];
   
     
     TSZHomeViewController *vC2 = [[TSZHomeViewController alloc] init];
-    vC2.title = @"2";
+    vC2.title = @"民生";
     [self addChildViewController:vC2];
     
     TSZHomeViewController *vC3 = [[TSZHomeViewController alloc] init];
-    vC3.title = @"3";
+    vC3.title = @"政治";
     [self addChildViewController:vC3];
     
     TSZHomeViewController *vC4 = [[TSZHomeViewController alloc] init];
-    vC4.title = @"4";
+    vC4.title = @"军事";
     
     [self addChildViewController:vC4];
     TSZHomeViewController *vC5 = [[TSZHomeViewController alloc] init];
-    vC5.title = @"5";
-    
+    vC5.title = @"娱乐";
     
     [self addChildViewController:vC5];
+    
+    TSZHomeViewController *vC6 = [[TSZHomeViewController alloc] init];
+    vC6.title = @"体育";
+    
+    
+    [self addChildViewController:vC6];
+    
+
+    TSZHomeViewController *vC7 = [[TSZHomeViewController alloc] init];
+    vC7.title = @"教育";
+    
+    
+    [self addChildViewController:vC7];
     
     
 }
@@ -81,8 +108,9 @@
     
     for ( int i = 0; i < count; i++) {
         
-        UILabel *label = [[UILabel alloc] init];
+        TSZTitleLabel *label = [[TSZTitleLabel alloc] init];
         
+        label.tag = i;
         [self.titleScrollView addSubview:label];
         
         
@@ -94,8 +122,42 @@
         UIViewController *vc =  self.childViewControllers[i];
         
         label.text = vc.title;
+        
+         //设置手势
+        [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
     }
     self.titleScrollView.contentSize = CGSizeMake(count * labelW, 0);
+    
+}
+
+- (void)labelClick:(UITapGestureRecognizer *)recongnizer{
+    
+    //获取点击的label
+    TSZTitleLabel *label = (TSZTitleLabel *)recongnizer.view;
+    CGFloat offset = label.tag * self.contentScrollView.frame.size.width;
+    
+    [self.contentScrollView setContentOffset:CGPointMake(offset, 0) animated:YES];
+    
+}
+
+#pragma mark: 代理方法
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    NSUInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
+    UIViewController *vc = self.childViewControllers[index];
+    
+    if (vc.view.superview) {
+        return;
+    }
+    
+    CGFloat vcW = scrollView.frame.size.width;
+    CGFloat vcH = scrollView.frame.size.height;
+    CGFloat vcX = scrollView.frame.size.width * index;
+    CGFloat vcY = 0;
+    
+    vc.view.frame = CGRectMake(vcX, vcY, vcW, vcH);
+    
+    [scrollView addSubview:vc.view];
+    
 }
 
 @end

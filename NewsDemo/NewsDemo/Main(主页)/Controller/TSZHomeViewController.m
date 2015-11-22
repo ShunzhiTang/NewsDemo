@@ -20,6 +20,8 @@ static NSString * const ID = @"cell";
     [super viewDidLoad];
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:ID];
+    
+    
 }
 
 #pragma mark - Table view data source
@@ -33,9 +35,7 @@ static NSString * const ID = @"cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID     forIndexPath:indexPath];
     
-    cell.textLabel.text = @"我是测试";
-    
-    
+    cell.textLabel.text = self.title;
     return cell;
 }
 

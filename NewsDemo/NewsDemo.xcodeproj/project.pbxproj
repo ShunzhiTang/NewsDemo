@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		243905E91C024BF000E0F2C7 /* TSZHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 243905E81C024BF000E0F2C7 /* TSZHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		243905EC1C027C8600E0F2C7 /* TSZTitleLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 243905EB1C027C8600E0F2C7 /* TSZTitleLabel.m */; settings = {ASSET_TAGS = (); }; };
 		24542A441C01AA250050ED5A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A431C01AA250050ED5A /* main.m */; };
 		24542A471C01AA250050ED5A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A461C01AA250050ED5A /* AppDelegate.m */; };
 		24542A4A1C01AA250050ED5A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24542A491C01AA250050ED5A /* MainViewController.m */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		243905E71C024BF000E0F2C7 /* TSZHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZHomeViewController.h; sourceTree = "<group>"; };
 		243905E81C024BF000E0F2C7 /* TSZHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZHomeViewController.m; sourceTree = "<group>"; };
+		243905EA1C027C8600E0F2C7 /* TSZTitleLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSZTitleLabel.h; sourceTree = "<group>"; };
+		243905EB1C027C8600E0F2C7 /* TSZTitleLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSZTitleLabel.m; sourceTree = "<group>"; };
 		24542A3F1C01AA250050ED5A /* NewsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24542A431C01AA250050ED5A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		24542A451C01AA250050ED5A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -72,6 +75,8 @@
 		243905E51C024BA000E0F2C7 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				243905EA1C027C8600E0F2C7 /* TSZTitleLabel.h */,
+				243905EB1C027C8600E0F2C7 /* TSZTitleLabel.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 			files = (
 				24542A4A1C01AA250050ED5A /* MainViewController.m in Sources */,
 				24542A471C01AA250050ED5A /* AppDelegate.m in Sources */,
+				243905EC1C027C8600E0F2C7 /* TSZTitleLabel.m in Sources */,
 				24542A441C01AA250050ED5A /* main.m in Sources */,
 				243905E91C024BF000E0F2C7 /* TSZHomeViewController.m in Sources */,
 			);
