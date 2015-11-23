@@ -24,6 +24,7 @@
     
     
     self.contentScrollView.delegate = self;
+    
     //添加子控制器
     [self setupChildController];
    
@@ -32,6 +33,11 @@
     
     //设置默认显示的控制器
     TSZHomeViewController *defalutVc = [self.childViewControllers firstObject];
+    //默认选择的title的颜色
+    TSZTitleLabel *label = self.titleScrollView.subviews.firstObject;
+    label.scale = 1.0;
+    
+    
     
 #warning 这里使用 self.view.bounds  {{0, 0}, {375, 667}}不能正常显示 ，使用 0, 0}, {600, 506} = self.contentScrollView.bounds
     
@@ -46,16 +52,13 @@
     
     //隐藏水平条
     self.titleScrollView.showsHorizontalScrollIndicator = NO;
-    
+    self.titleScrollView.showsVerticalScrollIndicator = NO;
     //设置内容的size
     
     CGFloat  screen = [UIScreen mainScreen].bounds.size.width;
     CGFloat contentW = self.childViewControllers.count * screen ;
     
     self.contentScrollView.contentSize  = CGSizeMake(contentW, 0);
-    
-   
-    
 }
 
 - (void)setupChildController{
@@ -123,7 +126,7 @@
         
         label.text = vc.title;
         
-         //设置手势
+         //设置手势 点击手势识别
         [label addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelClick:)]];
     }
     self.titleScrollView.contentSize = CGSizeMake(count * labelW, 0);
@@ -141,9 +144,42 @@
 }
 
 #pragma mark: 代理方法
+/**
+ * 动画结束时调用
+ *
+ * @param scrollView: 手动不会触发这个事件
+ 
+ */
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView{
+    
     NSUInteger index = scrollView.contentOffset.x / scrollView.frame.size.width;
     UIViewController *vc = self.childViewControllers[index];
+    
+    //滚动标题
+    TSZTitleLabel *label = self.titleScrollView.subviews[index];
+    CGFloat offsetX = label.center.x - self.titleScrollView.frame.size.width * 0.5;
+    
+    CGFloat maxOffset = self.titleScrollView.contentSize.width - self.titleScrollView.frame.size.width;
+    
+    if (offsetX < 0) {
+        offsetX = 0;
+    }else if(offsetX > maxOffset){
+        offsetX = maxOffset;
+    }
+    
+    [self.titleScrollView setContentOffset:CGPointMake(offsetX, 0) animated:YES];
+    
+    //遍历把其他的label设置成黑色
+    
+    [self.titleScrollView.subviews enumerateObjectsUsingBlock:^(__kindof UIView * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+        if (idx != index) {
+            TSZTitleLabel *other = self.titleScrollView.subviews[idx];
+            other.scale = 0.0;
+        
+        }
+    }];
+    
     
     if (vc.view.superview) {
         return;
@@ -159,5 +195,36 @@
     [scrollView addSubview:vc.view];
     
 }
+
+//手动动画结束调用
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+     [self scrollViewDidEndScrollingAnimation:scrollView];
+}
+
+//只要滚 就一直掉用
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    CGFloat value = ABS(self.contentScrollView.contentOffset.x / self.contentScrollView.frame.size.width);
+    
+    //左边的索引文字
+    NSUInteger leftIndex =  (NSUInteger)(self.contentScrollView.contentOffset.x / self.contentScrollView.frame.size.width);
+    
+    //右边索引
+    NSUInteger rightIndex = leftIndex + 1 ;
+
+    CGFloat rightScale = value- leftIndex;
+    
+    
+    //比例
+    CGFloat leftScale = 1 - rightScale;
+    
+    TSZTitleLabel *leftLabel = self.titleScrollView.subviews[leftIndex];
+    leftLabel.scale = leftScale;
+    
+    if (rightIndex < self.titleScrollView.subviews.count) {
+        TSZTitleLabel *rightLabel = self.titleScrollView.subviews[rightIndex];
+        rightLabel.scale = rightScale;
+    }    
+}
+
 
 @end

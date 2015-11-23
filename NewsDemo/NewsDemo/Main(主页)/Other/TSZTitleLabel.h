@@ -10,4 +10,6 @@
 
 @interface TSZTitleLabel : UILabel
 
+// 传入一个比例
+@property (nonatomic ,assign)CGFloat scale;
 @end
