@@ -1,10 +1,8 @@
 //
 //  TSZTitleLabel.m
 //  NewsDemo
-//
 //  Created by Tsz on 15/11/22.
 //  Copyright © 2015年 Tsz. All rights reserved.
-//
 
 #import "TSZTitleLabel.h"
 

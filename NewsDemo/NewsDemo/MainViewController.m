@@ -98,8 +98,6 @@
     
     
     [self addChildViewController:vC7];
-    
-    
 }
 
 - (void)setupTitle{

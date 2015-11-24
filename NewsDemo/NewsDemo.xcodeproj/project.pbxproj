@@ -48,6 +48,7 @@
 		243905E21C024BA000E0F2C7 /* Main(主页) */ = {
 			isa = PBXGroup;
 			children = (
+				24C0CAB91C040D4B00E1A74C /* Read(阅读) */,
 				243905E31C024BA000E0F2C7 /* Controller */,
 				243905E41C024BA000E0F2C7 /* Model */,
 				243905E51C024BA000E0F2C7 /* Other */,
@@ -109,7 +110,6 @@
 			children = (
 				243905E21C024BA000E0F2C7 /* Main(主页) */,
 				24542A6D1C01AD650050ED5A /* Sound(试听) */,
-				24542A681C01AD600050ED5A /* Sound(试听) */,
 				24542A631C01AD5B0050ED5A /* Mine(我) */,
 				24542A5E1C01AD520050ED5A /* Discover(发现) */,
 				24542A451C01AA250050ED5A /* AppDelegate.h */,
@@ -211,45 +211,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		24542A681C01AD600050ED5A /* Sound(试听) */ = {
-			isa = PBXGroup;
-			children = (
-				24542A691C01AD600050ED5A /* Controller */,
-				24542A6A1C01AD600050ED5A /* Model */,
-				24542A6B1C01AD600050ED5A /* Other */,
-				24542A6C1C01AD600050ED5A /* View */,
-			);
-			path = "Sound(试听)";
-			sourceTree = "<group>";
-		};
-		24542A691C01AD600050ED5A /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		24542A6A1C01AD600050ED5A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		24542A6B1C01AD600050ED5A /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		24542A6C1C01AD600050ED5A /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		24542A6D1C01AD650050ED5A /* Sound(试听) */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +244,45 @@
 			sourceTree = "<group>";
 		};
 		24542A711C01AD650050ED5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		24C0CAB91C040D4B00E1A74C /* Read(阅读) */ = {
+			isa = PBXGroup;
+			children = (
+				24C0CABA1C040D4B00E1A74C /* Controller */,
+				24C0CABB1C040D4B00E1A74C /* Model */,
+				24C0CABC1C040D4B00E1A74C /* Other */,
+				24C0CABD1C040D4B00E1A74C /* View */,
+			);
+			path = "Read(阅读)";
+			sourceTree = "<group>";
+		};
+		24C0CABA1C040D4B00E1A74C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		24C0CABB1C040D4B00E1A74C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		24C0CABC1C040D4B00E1A74C /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		24C0CABD1C040D4B00E1A74C /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
